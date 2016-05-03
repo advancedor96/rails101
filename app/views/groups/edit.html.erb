@@ -1,0 +1,11 @@
+<h1>修改討論版</h1>
+<hr>
+
+<%= simple_form_for @group do |f| %>
+	<%= f.input :title, input_html:{class: "form_control"} %>
+	<%= f.input :description, input_html:{class: "form_control"} %>
+
+
+	<%= f.submit "Submit", class: "btn btn-primary", data: {disable_with: "更新中..."} %>
+
+<% end %>
