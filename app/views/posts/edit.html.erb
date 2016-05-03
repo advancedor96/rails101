@@ -1,0 +1,8 @@
+新增文章
+<%= simple_form_for [@group, @post] do |f| %>
+	<%= f.input :content, input_html:{class: "form_control"} %>
+
+
+	<%= f.submit "Submit", class: "btn btn-primary", data: {disable_with: "送出中..."} %>
+	
+<% end %>
