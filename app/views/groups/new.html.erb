@@ -1,9 +1,3 @@
 新增討論版
-<%= simple_form_for @group do |f| %>
-	<%= f.input :title, input_html:{class: "form_control"} %>
-	<%= f.input :description, input_html:{class: "form_control"} %>
-
-
-	<%= f.submit "Submit", class: "btn btn-primary", data: {disable_with: "送出中..."} %>
-	
-<% end %>
+<hr>
+<%= render "form", group: @group %>

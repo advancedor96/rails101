@@ -1,0 +1,12 @@
+我發布的文章：
+<br>
+
+<% @posts.each do |post| %>
+	<%= post.id %><br>
+	<%= post.content %><br>
+	<%= post.group.title %><br>
+	<%= post.updated_at.to_s(:short) %><br>
+
+	<%= link_to("編輯", edit_group_post_path(post.group, post), data: {confirm: "確定編輯它？"} ) %><br>
+	<%= link_to("刪除", group_post_path(post.group, post), method: :delete, data: {confirm: "確定刪除？"} ) %><br><br>
+<% end %>

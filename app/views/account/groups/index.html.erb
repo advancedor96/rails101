@@ -1,0 +1,10 @@
+我加入的討論版：
+<br>
+
+<% @groups.each do |group| %>
+	<%= group.id %><br>
+	<%= link_to(group.title, group_path(group)) %><br>
+	<%= group.description %><br>
+	<%= group.posts.size %><br>
+	<%= group.updated_at %><br><br>
+<% end %>
